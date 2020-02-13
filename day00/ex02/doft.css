@@ -76,6 +76,7 @@ body
 }
  */
 
+ /*
 .book
 {
     margin-top: 10px;
@@ -85,14 +86,9 @@ body
 {
     width: 100px;
 }
+*/
 
-.brick
-{
-    background-image: url("resources/brick.jpg");
-    height: 70px;
-    width: 120px;
-    margin: auto;
-}
+
 
 /* ------class under middle-container------ */
 /*
@@ -115,46 +111,89 @@ body
     float: left;
     background: rgb(145, 145, 145);
     width: 800px;
-    height: 600px;
+    height: 460px;
     border-radius: 10px;
     margin-left: 800px;
-    margin-top: 30px;
+    margin-top: 10px;
     box-shadow: 5px 5px 5px black;
 }
 
 .class-img
 {
+    margin: 10px;
     width: 780px;
 }
+
+/* ------left-container------ */
 
 .left-container
 {
    float: left;
-   background: black;
-   width: 125px;
-   height: 450px;
+   background: rgb(145, 145, 145);
+   width: 130px;
+   height: 340px;
    border-radius: 10px;
-   position: fixed;
+   position: absolute;
    margin-left: 650px;
    margin-top: 10px;
    box-shadow: 5px 5px 5px black;
+   text-align: center;
 
 }
 
+.advance, .take, .look, .use, .speak
+{
+    width: 45%;
+}
+
+.advance
+{
+    margin-top: 10px;
+}
+
+.look
+{
+    border: 3px solid red;
+    border-radius: 5px; 
+}
+.speak
+{
+    margin-bottom: 10px;
+}
+
+/* ------ right-container------ */
 .right-container
 {
     float: left;
-    background: green;
-    width: 125px;
-    height: 450px;
+    background: rgb(145, 145, 145);
+    width: 130px;
+    height: 340px;
     border-radius: 10px;
-    position: fixed;
+    position: absolute;
     margin-left: 1625px;
     margin-top: 10px;
     box-shadow: 5px 5px 5px black;
+    text-align: center;
 
 }
 
+.book, .towel
+{
+    width: 50%;
+}
+
+.book
+{
+    margin-top: 10px;
+}
+
+.brick
+{
+    background-image: url("resources/brick.jpg");
+    height: 70px;
+    width: 120px;
+    margin: auto;
+}
 
 /* ------classes under left-container------ */
 
