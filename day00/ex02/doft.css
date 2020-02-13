@@ -90,7 +90,6 @@ body
 
 
 
-/* ------class under middle-container------ */
 /*
 .middle-container
 {
@@ -105,6 +104,41 @@ body
 }
 */
 
+/* ------ right-container------ */
+.right-container
+{
+    float: left;
+    background: rgb(145, 145, 145);
+    width: 130px;
+    height: 340px;
+    border-radius: 10px;
+    position: absolute;
+    margin-left: 1625px;
+    margin-top: 10px;
+    box-shadow: 5px 5px 5px black;
+    text-align: center;
+
+}
+
+.book, .towel
+{
+    width: 50%;
+}
+
+.book
+{
+    margin-top: 10px;
+}
+
+.brick
+{
+    background-image: url("resources/brick.jpg");
+    height: 70px;
+    width: 120px;
+    margin: auto;
+}
+
+/* ------class under middle-container------ */
 
 .middle-container
 {
@@ -161,254 +195,43 @@ body
     margin-bottom: 10px;
 }
 
-/* ------ right-container------ */
-.right-container
+/* ------green-container------  */
+
+.green-container
 {
-    float: left;
-    background: rgb(145, 145, 145);
-    width: 130px;
-    height: 340px;
-    border-radius: 10px;
+    width: 400px;
+    height: 150px;
+    background: rgb(41, 250, 121);
+    margin-left: 600px;
+    margin-top: 400px;
     position: absolute;
-    margin-left: 1625px;
-    margin-top: 10px;
-    box-shadow: 5px 5px 5px black;
-    text-align: center;
-
-}
-
-.book, .towel
-{
-    width: 50%;
-}
-
-.book
-{
-    margin-top: 10px;
-}
-
-.brick
-{
-    background-image: url("resources/brick.jpg");
-    height: 70px;
-    width: 120px;
-    margin: auto;
-}
-
-/* ------classes under left-container------ */
-
-
-
-/*
-.left-container
-{
-    float: left;
-    width: 50px;
-    height: 20%; 
-    background: rgb(145, 145, 145);
     border-radius: 10px;
-    margin-left: 100px;
-    margin-top: 10px;
-    text-align: center;
     box-shadow: 5px 5px 5px black;
-}
-
-
-.advance, .take, .look, .use, .speak
-{
-    width: 60%;
-}
-
-.advance
-{
-    margin-top: 10px;
-}
-
-.look
-{
-    border: 3px solid red;
-    border-radius: 5px; 
-}
-.speak
-{
-    margin-bottom: 10px;
-}
-*/
-
-/* ------class under right-container------ */
-
-/*
-.right-container
-{
-    float: right;
-    width: 50px;
-    background: rgb(145, 145, 145);
-    border-radius: 10px;
-    margin-left: 70%;
-    margin-top: 0px;
-    text-align: center;
-    box-shadow: 5px 5px 5px black;
-}
-*/
-/*
-.right-container {
-    padding-top: 0.8%;
-    margin-right: 2%;
-    margin-left: 2%;
-    float: right;
-    text-align: center;
-    padding-bottom: 15%;
-    width: 10%;
-  }
-*/
-
-/*
-.book, .towel
-{
-    width: 60%;
-}
-
-.book
-{
-    margin-top: 10px;
-}
-
-.brick1
-{
-    visibility: hidden;
-}
-
-.brick2
-{
-    visibility: hidden;
-    margin-top: 0px;
     padding-top: 0px;
-}
-*/
-
-/*
-.brick-container1
-{
-    background-image: url("resources/brick.jpg");
-    background-size: 30%;
-    width: 80%;
-    height: 40%;
-    max-width: 80px;
-    max-height: 20px;
-    margin: auto;
-    padding: 3%;
-    padding-bottom: 0px;
-    margin-bottom: 0px;
-    background-repeat: repeat-x;
-}
-*/
-/*
-.brick-container2
-{
-    background-image: url("resources/brick.jpg");
-    background-repeat: repeat;
-    background-size: 30%;
-    width: 80%;
-    height: 40%;
-    margin: auto;
-    padding: 3%; 
-    padding-top: 0;
-    margin-top: 0px;
-    background-repeat: repeat-x;
-}
-*/
-/*
-.brick img
-{
-    width: 50%;
-}
-*/
-/*
-.brick-container
-{
-    background-image: url("./resources/brick.jpg");
-    background-size: 27%;
-    background-repeat: repeat;
-    width: 85%;
-    height: 60%;
-    padding: 3%;
-    margin: auto;
-}
-*/
-/*
-img.wall
-{
-    display: flex;;
-    background-image: url("resources/brick.jpg");
-}
-*/
-/*
-.wall
-{
-    background-image: url("resources/brick.jpg");
-    background-size: 30%;
-    height: 30px;
-    width: 60px;
-}
-*/
-/*
-.wall
-{
-    background-image: url('resources/brick.jpg');
-    margin: 5px 0 0 -20px;
-    height: 70px;
-    width: 120px;
-  }
-*/
-/*
-.brick-container
-{
-    background-image: url("resources/brick.jpg");
-    width: 30%;
-    justify-content: center;
-    margin-left: 10px;
-}
-*/
-/*
-.brick
-{
-    visibility: hidden;
-    margin-bottom: 135%;
-*/
-    /*margin-right: 50%;*/
-/*
-    background-image: url('./resources/brick.jpg');
-    background-size: 60%;
-    width: 70%;
-    height: 50%;
-    margin-bottom: 135%;
-
-}
-*/
-/*
-.brick
-{
-    margin-bottom: 135%;
-    background-repeat: repeat;
-    width: 20%;
-    height: 30%;
-}
-*/
-/* ------class under middle-container------ */
-
-/*
-.middle-container
-{
-    float: left;
-    width: 50%;
-    background: rgb(145, 145, 145);
-    border-radius: 10px;
-    margin-top: 10px;
-    margin-left: 10px;
+    padding-left: 5px;
 }
 
-.classroom
+p
 {
-    width: 95%; 
+    font-family: Arial;
 }
-*/
+
+.green-box-shadow
+{
+    text-shadow: 5px 5px 5px red;
+}
+
+.entrez
+{
+    font-size: 25px;
+}
+
+.form
+{
+    width: 300px;
+}
+
+.submit
+{
+    background: rgb(228, 228, 228);
+}
