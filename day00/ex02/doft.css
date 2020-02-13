@@ -19,6 +19,7 @@ body
     background: rgb(145, 145, 145);
     border-radius: 10px;   
     margin: auto;
+    margin-left: 600px;
     position: relative;
     box-shadow:  5px 5px 5px black;
 }
@@ -56,6 +57,104 @@ body
     right: 15px;
     bottom: -10%;
 }
+
+/* ------classes under right-container------*/
+
+/*
+.right-container
+{
+    width: 150px;
+    height: 450px;
+    background: rgb(145, 145, 145);
+    border-radius: 10px;   
+    margin: auto;
+    margin-top: 10px;
+    margin-left: 1620px;
+    box-shadow:  5px 5px 5px black;
+    text-align: center;
+    float: right;
+}
+ */
+
+.book
+{
+    margin-top: 10px;
+}
+
+.book, .towel
+{
+    width: 100px;
+}
+
+.brick
+{
+    background-image: url("resources/brick.jpg");
+    height: 70px;
+    width: 120px;
+    margin: auto;
+}
+
+/* ------class under middle-container------ */
+/*
+.middle-container
+{
+    width: 600px;
+    height: 400px;
+    background-color: rgb(145, 145, 145);
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 10px;
+    margin-left: 200px;
+    box-shadow: 5px 5px 5px black;
+}
+*/
+
+
+.middle-container
+{
+    float: left;
+    background: rgb(145, 145, 145);
+    width: 800px;
+    height: 600px;
+    border-radius: 10px;
+    margin-left: 800px;
+    margin-top: 30px;
+    box-shadow: 5px 5px 5px black;
+}
+
+.class-img
+{
+    width: 780px;
+}
+
+.left-container
+{
+   float: left;
+   background: black;
+   width: 125px;
+   height: 450px;
+   border-radius: 10px;
+   position: fixed;
+   margin-left: 650px;
+   margin-top: 10px;
+   box-shadow: 5px 5px 5px black;
+
+}
+
+.right-container
+{
+    float: left;
+    background: green;
+    width: 125px;
+    height: 450px;
+    border-radius: 10px;
+    position: fixed;
+    margin-left: 1625px;
+    margin-top: 10px;
+    box-shadow: 5px 5px 5px black;
+
+}
+
 
 /* ------classes under left-container------ */
 
