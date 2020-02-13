@@ -7,7 +7,6 @@ body
 
 .page-container
 {
-    /*width: 1460px;*/
     margin: auto;
 }
 
@@ -57,52 +56,6 @@ body
     right: 15px;
     bottom: -10%;
 }
-
-/* ------classes under right-container------*/
-
-/*
-.right-container
-{
-    width: 150px;
-    height: 450px;
-    background: rgb(145, 145, 145);
-    border-radius: 10px;   
-    margin: auto;
-    margin-top: 10px;
-    margin-left: 1620px;
-    box-shadow:  5px 5px 5px black;
-    text-align: center;
-    float: right;
-}
- */
-
- /*
-.book
-{
-    margin-top: 10px;
-}
-
-.book, .towel
-{
-    width: 100px;
-}
-*/
-
-
-
-/*
-.middle-container
-{
-    width: 600px;
-    height: 400px;
-    background-color: rgb(145, 145, 145);
-    border-radius: 10px;
-    margin: auto;
-    margin-top: 10px;
-    margin-left: 200px;
-    box-shadow: 5px 5px 5px black;
-}
-*/
 
 /* ------ right-container------ */
 .right-container
@@ -234,4 +187,28 @@ p
 .submit
 {
     background: rgb(228, 228, 228);
+}
+
+/* ------chair-container and monitor-container------*/
+
+.chair-container
+{
+    /*background: orange;*/
+    height: 170px;
+    width: 89px ;
+    margin-left: 1070px;
+    margin-top: 270px;
+    position: absolute; 
+}
+
+.monitor-container
+{
+    /*background: greenyellow;*/
+    height: 130px;
+    width: 150px;
+    margin-left: 1420px;
+    margin-top: 265px;
+    position: absolute;
+    border-radius: 10px;
+    transform: skewX(-5deg);
 }
