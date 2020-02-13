@@ -1,0 +1,120 @@
+
+body
+{
+    background-color: black;
+    margin-bottom: 100px;
+    margin-right: 10px;;
+}
+
+h1
+{
+    text-align: center;
+    color: white;
+    font-family: "kalam";
+}
+
+.image-container
+{
+    text-align: center;
+}
+
+img
+{
+    text-align: center;
+    width: 13%;
+    height: 20%;
+}
+
+td
+{
+    width: 10vw;
+    height: 2vh;
+}
+
+.atomic-weight
+{
+    margin-top: 0px;
+    text-align: right;
+    font-size: calc(0.5vw + 0.5vh);
+}
+
+.atomic-number
+{
+    margin-bottom: 0px;
+    text-align: left;
+  font-size: calc(0.5vw + 0.5vh);
+}
+.element
+{
+    text-align: center;
+    font-size: calc(1vw + 1vh);
+    font-weight: bold;
+}
+
+/* For font color */
+
+/* 
+    text-shadow: *left-offset* *top-offset* *blur-distance* *color*;
+*/
+
+/* other-nonmetal */
+.other-nonmetal .atomic-number { color: #52ee61; text-shadow: 0 0 0.4vw currentColor}
+.other-nonmetal .atomic-weight { color: #52ee61; text-shadow: 0 0 0.4vw currentColor}
+.other-nonmetal .element { color: #52ee61; text-shadow: 0 0 0.4vw currentColor}
+
+/* noble-gas */
+.noble-gas .atomic-number { color: #759fff; text-shadow: 0 0 0.4vw currentColor}
+.noble-gas .atomic-weight { color: #759fff; text-shadow: 0 0 0.4vw currentColor}
+.noble-gas .element { color: #759fff; text-shadow: 0 0 0.4vw currentColor}
+
+/* alkali */
+.alkali .atomic-number { color: #ecbe59; text-shadow: 0 0 0.4vw currentColor}
+.alkali .atomic-weight { color: #ecbe59; text-shadow: 0 0 0.4vw currentColor}
+.alkali .element { color: #ecbe59; text-shadow: 0 0 0.4vw currentColor}
+
+/* alkaline */
+.alkaline .atomic-number { color: #dee955; text-shadow: 0 0 0.4vw currentColor}
+.alkaline .atomic-weight { color: #dee955; text-shadow: 0 0 0.4vw currentColor}
+.alkaline .element { color: #dee955; text-shadow: 0 0 0.4vw currentColor}
+
+/* metalloid */
+.metalloid .atomic-number { color: #3aefb6; text-shadow: 0 0 0.4vw currentColor}
+.metalloid .atomic-weight { color: #3aefb6; text-shadow: 0 0 0.4vw currentColor}
+.metalloid .element { color: #3aefb6; text-shadow: 0 0 0.4vw currentColor}
+
+/* post-transition-metal */
+.post-transition-metal .atomic-number { color: #4cddf3; text-shadow: 0 0 0.4vw currentColor}
+.post-transition-metal .atomic-weight { color: #4cddf3; text-shadow: 0 0 0.4vw currentColor}
+.post-transition-metal .element { color: #4cddf3; text-shadow: 0 0 0.4vw currentColor}
+
+/* transition-metal */
+.transition-metal .atomic-number { color: #fd8572; text-shadow: 0 0 0.4vw currentColor}
+.transition-metal .atomic-weight { color: #fd8572; text-shadow: 0 0 0.4vw currentColor}
+.transition-metal .element { color: #fd8572; text-shadow: 0 0 0.4vw currentColor}
+
+/* lanthanoid */
+.lanthanoid .atomic-number { color: #ec77a3; text-shadow: 0 0 0.4vw currentColor}
+.lanthanoid .atomic-weight { color: #ec77a3; text-shadow: 0 0 0.4vw currentColor}
+.lanthanoid .element { color: #ec77a3; text-shadow: 0 0 0.4vw currentColor}
+
+/* actinoid */
+.actinoid .atomic-number { color: #c686cc; text-shadow: 0 0 0.4vw currentColor}
+.actinoid .atomic-weight { color: #c686cc; text-shadow: 0 0 0.4vw currentColor}
+.actinoid .element { color: #c686cc; text-shadow: 0 0 0.4vw currentColor}
+
+/* unknown */
+.unknown .atomic-number { color: #cccccc; text-shadow: 0 0 0.4vw currentColor}
+.unknown .atomic-weight { color: #cccccc; text-shadow: 0 0 0.4vw currentColor}
+.unknown .element { color: #cccccc; text-shadow: 0 0 0.4vw currentColor}
+
+/* For border */
+.other-nonmetal { border: solid #52ee61}
+.noble-gas {border: solid #759fff}
+.alkali {border: solid #ecbe59}
+.alkaline {border: solid #dee955}
+.metalloid {border: solid #3aefb6}
+.post-transition-metal {border: solid #4cddf3}
+.transition-metal {border: solid #fd8572}
+.lanthanoid{border: solid #ec77a3}
+.actinoid{border: solid #c686cc}
+.unknown{border: solid #cccccc}
