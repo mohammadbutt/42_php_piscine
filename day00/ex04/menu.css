@@ -1,0 +1,75 @@
+*
+{
+    margin: 0;
+}
+body
+{
+    background: rgb(93, 247, 247);
+}
+
+.h1-container
+{
+    text-align: center;
+}
+
+/*  list-style: none    -> removes bullet point
+    float: left         -> puts items in a row
+    padding: 10px       -> adds 10px padding between items
+*/
+
+.navbar
+{
+    background-color: white;
+    width: 100%;
+    height: 30px;
+}
+
+li
+{
+    list-style: none;
+    float: left;
+    padding: 10px;
+}
+
+/* removes underline from links */
+a
+{
+    text-decoration: none;
+    display: inline-block;
+    
+}
+
+/* Hides Arrival, Departure, Suggestions*/
+.dropdown-content
+{
+    display: none;
+}
+
+
+
+/*
+    display: block          -> shows menu items/content in column format
+    display: inline         -> Will show items/content in row format
+    display: inline-block   -> Will show items/content in row format
+
+*/
+.dropdown-content a
+{
+    display: block;
+}
+
+/*
+    When hovered over, display: block allows the content to be shown
+    
+    If display: block -> There is background color
+    If display: inline -> There is no background color
+*/
+.dropdown:hover .dropdown-content
+{
+    display: block;
+    background-color: white;
+}
+a:hover
+{
+    background-color: rgb(201, 245, 241);
+}
