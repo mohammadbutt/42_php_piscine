@@ -3,12 +3,13 @@
 /*
 reference:
 https://stackoverflow.com/questions/23622141/how-to-read-console-user-input-in-php
+https://stackoverflow.com/questions/15322371/php-wait-for-input-from-command-line
 */
 
 while(true)
 {
 	echo "Enter a number: ";
-	$user_string = readline("");
+	$user_string = trim(fgets(STDIN));
 	if(is_numeric($user_string) == true)
 	{
 		if(($user_string % 2) == 0)
