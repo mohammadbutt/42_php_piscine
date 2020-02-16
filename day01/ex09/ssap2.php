@@ -1,5 +1,9 @@
 #!/usr/bin/php
 <?php
+/*
+    References:
+    https://stackoverflow.com/questions/8456029/in-php-how-does-usort-function-works
+*/
 function ft_split($str)
 {
     $str_array = preg_split('/\s+/', $str, -1, PREG_SPLIT_NO_EMPTY);
