@@ -6,6 +6,20 @@ function ft_split($str)
     return($str_array);
 }
 
+function is_alpha_lower($c)
+{
+    if($c >= 'a' && $c <= 'z')
+        return(true);
+    return(false);
+}
+
+function is_alpha_upper($c)
+{
+    if($c >= 'A' && $c <= 'Z')
+        return(true);
+    return(false);
+}
+
 function is_digit($char)
 {
     if($char >= '0' && $char <= '9')
@@ -13,9 +27,9 @@ function is_digit($char)
     return(false);
 }
 
-function is_symbol($char)
+function is_symbol($c)
 {
-    if(($char <= 47) || ($char >= 58 && $char <= 64) || ($char >= 91 && $char <= 96) || ($char >= 123))
+    if(($c <= 47) || ($c >= 58 && $c <= 64) || ($c >= 91 && $c <= 96) || ($c >= 123))
         return(true);
     return(false);
 }
@@ -25,7 +39,9 @@ function calculate_ascii($char)
     $ascii_value = ord($char);
     if($ascii_value == 0)
         return($ascii_value);
-    if(ctype_upper($char) == true)
+    if(is_alpha_lower($char) == true)
+        $ascii_value = $ascii_value + 0;    
+    else if(is_alpha_upper($char) == true)
         $ascii_value = $ascii_value + 32;
     else if(is_digit($char) == true)
         $ascii_value = $ascii_value + 100;
@@ -70,8 +86,7 @@ function ssap2_compare($str1, $str2)
     $i = 1;
     $full_array = array();
     while($i < $argc)
-    $full_array = array_merge($full_array, ft_split($argv[$i++]));
-
+        $full_array = array_merge($full_array, ft_split($argv[$i++]));
     usort($full_array, "ssap2_compare");
     foreach($full_array as $value)
         echo($value)."\n";
