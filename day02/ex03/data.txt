@@ -1,5 +1,0 @@
-mbutt    console  Feb 16 16:46 
-mbutt    ttys001  Feb 16 17:44 
-mbutt    ttys002  Feb 16 17:44 
-mbutt    ttys003  Feb 16 17:44 
-mbutt    ttys004  Feb 16 19:22 
