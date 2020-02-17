@@ -27,7 +27,6 @@ function ft_strlen($str)
     return($i);
 }
 
-
 function ft_split($str)
 {
     $i = 0;
