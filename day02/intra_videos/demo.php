@@ -67,7 +67,7 @@ echo("nb_num1a_asterik:".$nb_num1a_asterik)." string has 'tta' does not have a n
                    but it is still a match because we have * after [0-9].
                    * means we can have 0 or more occurances of a number or numbers.\n";
 
-// + (plus) and * (asterik) are called modifiers
+// + (plus) and * (asterik) are called modifiers or quantifiers
 
 // A number between {} curly brackets means, we want to have that character as many times
 // In the below example we are looking for 4 numbers, because we do [0-9]{4} 
@@ -77,7 +77,6 @@ echo("nb_curly4:".$nb_curly4)."\n";
 $nb_curly5 = preg_match("/t[0-9]{5}t[a-m]/", "abcdeft0123tm");
 echo("nb_curly5:".$nb_curly5)." should return 0. because we have 5 in curly brackets {5},
             but the string only has '0123'. These are only 4 numbers";
-
 
 
 //echo($nb)."\n";
