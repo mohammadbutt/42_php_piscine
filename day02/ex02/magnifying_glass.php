@@ -9,49 +9,36 @@
     https://stackoverflow.com/questions/2529549/regex-uppercase-to-lowercase
     https://stackoverflow.com/questions/9939066/how-to-transform-a-string-to-lowercase-with-preg-replace
     https://stackoverflow.com/questions/34420366/replace-an-upper-case-string-with-lower-case-using-preg-replace-and-regex
+    https://www.youtube.com/watch?v=In5NBIRfMrQ
+    https://www.youtube.com/watch?v=DTQDMKx4Rks&t=55s
 */
-/*
-<html><head><title>Nice page</title></head>
-<body>Hello World <a href=http://cyan.com title="a link">This is a link</a>
-<br /><a     href=https://www.riven.com>And this too <img src=wrong.image title="And also this"></a>
-</body></html>
-*/
-
-/*
-<a(\s+)(href=http)s?://(www)?\.?[a-zA-z0-9]+\.[a-z]+
-<a.*?(</a>) - Selects all of the text from <a </a>
-(<a.*)(</a>) - 1. Selects all of the text from <a </a> - This will turn everything to uppercase
-(<A)(\s+)(.*.COM>?)(\s*)(TITLE)? - We will use this to turn the first half of the lines to lowercase back
-<IMG.* = - We will use this to turn the second half of the lines to lowercase back
-(<a)(.*?)(>)[a-zA-Z\s+]*(</a>)
-
-// -- First line
-(<a.*)(</a>) - 1. Converts the entire line in uppercase
-(<a)(\s+)(.*)(.(com|io|net|edu))((>)?)((\s*)?)((title)?) - 2. Converts First half to lowercase for both lines
-(<img)(.*)(title=) - 3. Converts img tag to lowercase
-</a> - 4. Coverts last bit to lowercase
-
-*/
-//echo("This is a test\n");
     if($argc != 2)
     {
+        echo("usage./magnifying_glass.php [file_name]\n");
         return(0);
     }
-
-    $file_array = file($argv[1]);
-    $file_count = count($file_array);
-    $i = 0;
-    while($i < $file_count - 1)
+    if(file_exists($argv[1]) == false)
     {
-        $preg_match_return = preg_match("/(<a.*)(<\/a>)/", $file_array[$i]);
-        if($preg_match_return == 1)
+        echo("File does not exist\n");
+        return(0);
+    }
+    $file_array = file($argv[1]);
+    $count = count($file_array);
+    $i = 0;
+    while($i < $count)
+    {
+        $pattern1 = '/<a.*title="(.*)">/';
+        $pattern2 = '/<a.*?>(.*?)</';
+        if(preg_match($pattern1, $file_array[$i]) == true)
         {
-            $file_array[$i] = preg_replace_callback("/(<a.*)(<\/a>)/", function($new_string)
-            {
-                return(strtolower($new_string));
-            }, $file_array[$i]);
+            preg_match_all($pattern1, $file_array[$i], $array_of_groups);
+            $file_array[$i] = str_replace($array_of_groups[1][0], strtoupper($array_of_groups[1][0]), $file_array[$i]);
+        }
+        if(preg_match($pattern2, $file_array[$i]) == true)
+        {
+            preg_match_all($pattern2, $file_array[$i], $array_of_groups);
+            $file_array[$i] = str_replace($array_of_groups[1][0], strtoupper($array_of_groups[1][0]), $file_array[$i]);
         }
         echo($file_array[$i++]);
     }
-
 ?>
