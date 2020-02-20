@@ -5,7 +5,6 @@
     set, access, and delete cookies - https://www.geeksforgeeks.org/php-cookies/
     set and read/access cookies - https://www.youtube.com/watch?v=9DMrMruYGFY
 */
-
     if($_GET["action"] == "set")
         setcookie($_GET["name"], $_GET["value"], time() + (1* 24 * 60 * 60));
     else if($_GET["action"] == "get")
