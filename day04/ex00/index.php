@@ -11,6 +11,9 @@
         $_SESSION["login"] = $_GET["login"];
         $_SESSION["passwd"] = $_GET["passwd"];
     }
+    $username = $_SESSION["login"];
+    $password = $_SESSION["passwd"];
+
 ?>
 
 <!DOCTYPE html>
@@ -32,9 +35,9 @@
     
     <body>
         <form action="index.php" method="GET">
-            Username: <input type="text" name="login" value="<?php echo($_SESSION["login"]); ?>">
+            Username: <input type="text" name="login" value="<?php echo($username); ?>">
             <br>
-            Password: <input type="text" name="passwd" value="<?php echo($_SESSION["passwd"]); ?>">
+            Password: <input type="text" name="passwd" value="<?php echo($password); ?>">
             <input type="submit" value="OK">
         </form>
     </body>
