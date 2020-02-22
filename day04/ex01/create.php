@@ -37,9 +37,11 @@ function create_directories()
    else
        echo("ERROR\n");
     $unserialized_file = unserialize(file_get_contents($file_path));
+    $normal_file = file_get_contents($file_path);
 //    foreach($unserialized_file as $user)
 //        echo($user["login"]);
-    print_r($unserialized_file);
+    print_r($unserialized_file["login"]);
+    print_r(unserialize($normal_file)["login"]);
 //    foreach($unserialized_file as $user)
 //        echo($user["login"])."\n";
 //    $file_serialized = file_get_contents($file_path);
