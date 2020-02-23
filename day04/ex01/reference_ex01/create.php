@@ -24,4 +24,5 @@
     }
     else
         echo "ERROR\n";
+    print_r($contents);
 ?>
