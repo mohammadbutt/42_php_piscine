@@ -39,7 +39,7 @@ function is_login_valid()
     $login = $_POST["login"];
     $password = $_POST["passwd"];
     $submit = $_POST["submit"];
-    if($login !== NULL && $password !== NULL && strcmp($submit, "OK") == false && is_login_valid() == true)
+    if($login !== "" && $password !== "" && strcmp($submit, "OK") == false && is_login_valid() == true)
     {
         if(file_exists($file_path) == true)
             $new_user_credentials = unserialize(file_get_contents($file_path));
