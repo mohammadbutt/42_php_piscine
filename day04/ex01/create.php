@@ -5,7 +5,7 @@
     https://stackoverflow.com/questions/9671659/php-is-null-and-null/9671787#9671787
     Eli the Computer Guy - https://www.youtube.com/watch?v=QmBSijbgTwE
     https://stackoverflow.com/questions/8641889/how-to-use-php-serialize-and-unserialize
-
+    Online hash calculator - http://www.unit-conversion.info/texttools/whirlpool/
 */
 
 function create_directories()
