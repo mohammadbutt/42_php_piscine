@@ -126,11 +126,11 @@ function convert_date_array_to_date_string($date_array)
     $year_month_date_string = $year."-".get_month($month)."-".$date;
     return($year_month_date_string);
 }
+/*
+    ------main------
+*/
     if($argc != 2)
-    {
-        echo("Wrong Format\n");
         return(0);
-    }
     $str_array = explode(" ", $argv[1]);
     if(is_info_valid($str_array) == false)
     {
