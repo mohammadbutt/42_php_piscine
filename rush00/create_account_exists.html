@@ -3,7 +3,6 @@
 <head>
     <title>Create Account</title>
 </head>
-
 <style>
     form
     {
@@ -14,17 +13,20 @@
     .table_p
     {
         text-align: center;
-        font-size: 30px;
-        color: rgb(252, 2, 106);
+        font-size: 20px;
+        color: rgb(252, 2, 2);
         font-weight: bold;
     }
-
 </style>
-
 <body>
     <form action="create_account.php" method="POST">
         <table margin="0">
-            <p class="table_p">Create Account</p>
+<!--             
+            <tr>
+                <td text-align="center">Login already exists</td>
+            </tr>
+-->
+            <p class="table_p">Login already exists</p>
             <tr>
                 <td>login: </td>
                 <td text-align="center"> <input type="text" name="login" required="true"></td>

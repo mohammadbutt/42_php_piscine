@@ -7,7 +7,7 @@
 */
     if($_GET["action"] == "set")
         setcookie($_GET["name"], $_GET["value"], time() + (1* 24 * 60 * 60));
-    else if($_GET["action"] == "get")
+    else if($_GET["action"] == "get" && strlen($_COOKIE[$_GET["name"]]) != 0)
         echo($_COOKIE[$_GET["name"]]."\n");
     else if($_GET["action"] == "del")
         setcookie($_GET["name"], $_GET["value"], time() - (1 * 24 * 60 * 60));
