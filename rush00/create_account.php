@@ -1,5 +1,10 @@
 <?php
 /*
+    References:
+    https://stackoverflow.com/questions/18305258/display-message-before-redirect-to-other-page
+*/
+
+/*
     --- functions ---
 */
 function create_directories()
@@ -26,6 +31,14 @@ function is_login_valid()
     return(true);
 }
 
+function redirect_message($message)
+{
+    header("refresh:5; url=create_account.html");
+//    echo("Login with this name already exists<br>");
+    echo("Redirecting in 5 seconds<br>");
+    echo($message);
+}
+
 function create_new_account()
 {
     create_directories();
@@ -34,7 +47,10 @@ function create_new_account()
     $password = $_POST["password"];
     $submit = $_POST["submit"];
     if($login === "" || $password === "")
-        echo("Can not have empty login or password\n");
+    {
+        redirect_message("Can not have empty login or password");
+    //    echo("Can not have empty login or password\n");
+    }
     else if(strcmp($submit, "OK") == 0 && is_login_valid() == true)
     {
         if(file_exists($user_credential_file_path) == true)
@@ -44,7 +60,13 @@ function create_new_account()
         echo("Login created successfully\n");
     }
     else
-        echo("Login with this name already exists\n");
+    {
+        redirect_message("Login with this name already exists");
+//        header("refresh:5; url=create_account.html");
+//        echo("Login with this name already exists<br>");
+//        echo("Redirecting in 5 seconds");
+//        exit();
+    }
 
 }
 
@@ -54,8 +76,4 @@ function create_new_account()
 
     session_start();
     create_new_account();
-//    $_SESSION["user_login"] = $_POST["login"];
-//    $login = $_SESSION["user_login"];
-//    echo($login)."\n";
-//    create_directories();
 ?>
