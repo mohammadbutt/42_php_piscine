@@ -53,8 +53,6 @@ function update_password($i)
 
     session_start();
     $user_index = get_valid_user_index();
-//    echo($user_index);
-//    exit();
     if($user_index >= 0)
     {
         update_password($user_index);

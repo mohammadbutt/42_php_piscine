@@ -36,12 +36,8 @@ function get_valid_user_index()
 function delete_account($i)
 {
     $user_credential_file_path = "../database/user_credential.txt";
-//    $login = $_POST["login"];
-//    $password = $_POST["password"];
     $file_array = unserialize(file_get_contents($user_credential_file_path));
     unset($file_array[$i]);
-//    unset($file_array[$i]["login"]);
-//    unset($file_array[$i]["password"]);
     $file_array_reindexed = array_values($file_array);
     file_put_contents($user_credential_file_path, serialize($file_array_reindexed));
 }
@@ -52,7 +48,6 @@ function delete_account($i)
 
     session_start();
     $user_index = get_valid_user_index();
-//    echo($user_index)."<br>";
     if($user_index >= 0)
     {
         delete_account($user_index);
