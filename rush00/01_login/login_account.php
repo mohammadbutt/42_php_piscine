@@ -39,7 +39,9 @@ function is_login_password_valid()
 
     session_start();
     if(is_login_password_valid() == true)
+    {
         echo("Welcome ".$_POST["login"]."<br>");
+    }
     else
     {
         header("Location: login_account_invalid.html");

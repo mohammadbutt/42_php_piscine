@@ -2,7 +2,6 @@
 
 function update_password($file, $i)
 {
-    $new_Password = $_POST["newpw"];
     $file_path = "../htdocs/private/passwd";
     $new_password = $_POST["newpw"];
     $file[$i]["passwd"] = hash("whirlpool", $new_password);
@@ -12,11 +11,13 @@ function update_password($file, $i)
     $login = $_POST["login"];
     $old_password = $_POST["oldpw"];
     $submit = $_POST["submit"];
-    if($login === "" || $old_password === "" || $new_password === "" || strcmp($submit, "OK") != 0)
+    $new_password = $_POST["newpw"];
+    if(strcmp($login, "") == 0 || strcmp($old_password, "") == 0 || strcmp($new_password, "") == 0 || strcmp($submit, "OK") != 0)
     {
         echo("ERROR\n");
         return(0);
     }
+    echo("Comes here\n");
     $file_path = "../htdocs/private/passwd";
     $i = 0;
     $file = unserialize(file_get_contents($file_path));
