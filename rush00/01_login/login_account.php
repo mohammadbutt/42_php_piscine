@@ -9,7 +9,7 @@
 
 function is_login_password_valid()
 {
-    $user_credential_file_path = "database/user_credential.txt";
+    $user_credential_file_path = "../database/user_credential.txt";
     $_SESSION["login"] = $_POST["login"];
     $_SESSION["password"] = $_POST["password"];
     $login = $_SESSION["login"];
@@ -41,6 +41,9 @@ function is_login_password_valid()
     if(is_login_password_valid() == true)
         echo("Welcome ".$_POST["login"]."<br>");
     else
-        echo("Invalid login or password. Please Try again");
+    {
+        header("Location: login_account_invalid.html");
+//        echo("Invalid login or password. Please Try again");
+    }
 
 ?>

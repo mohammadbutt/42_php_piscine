@@ -2,6 +2,7 @@
 /*
     References:
     https://stackoverflow.com/questions/18305258/display-message-before-redirect-to-other-page
+    https://stackoverflow.com/questions/2300142/how-to-add-extra-whitespace-in-php
 */
 
 /*
@@ -9,7 +10,7 @@
 */
 function create_directories()
 {
-    $directory_path = "database/";
+    $directory_path = "../database/";
     if(file_exists($directory_path) == false)
     {
         mkdir($directory_path);
@@ -18,7 +19,7 @@ function create_directories()
 
 function does_login_exist()
 {
-    $user_credential_file_path = "database/user_credential.txt";
+    $user_credential_file_path = "../database/user_credential.txt";
     $login = $_POST["login"];
     if(file_exists($user_credential_file_path) == false)
         return(false);
@@ -47,7 +48,7 @@ function redirect_account_created()
 function create_new_account()
 {
     create_directories();
-    $user_credential_file_path = "database/user_credential.txt";
+    $user_credential_file_path = "../database/user_credential.txt";
     $login = $_POST["login"];
     $password = $_POST["password"];
     $submit = $_POST["submit"];
