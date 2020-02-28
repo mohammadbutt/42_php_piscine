@@ -40,8 +40,8 @@ function redirect_account_exists()
 function redirect_account_created()
 {
     header("refresh: 5; url=create_account.html");
-    echo(str_repeat("&nbsp;", 9));
-    echo("Account created succesfully<br>");
+    echo(str_repeat("&nbsp;", 2));
+    echo("Account ".$_POST["login"]." created succesfully<br>");
     echo("Redirecting to homepage in 5 seconds<br>");
 }
 
@@ -70,6 +70,5 @@ function create_new_account()
 */
 
     session_start();
-//    echo("Does it run<br>");
     create_new_account();
 ?>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Delete Account</title>
+</head>
+
+<style>
+    form
+    {
+        background-color: rgb(144, 255, 255);
+        width: 300px;
+        height: 300px;
+    }
+    .table_p
+    {
+        text-align: center;
+        font-size: 30px;
+        color: rgb(0, 0, 0);
+        font-weight: bold;
+    }
+
+</style>
+
+<body>
+    <form action="delete_account.php" method="POST">
+        <table margin="0">
+            <p class="table_p">Delete Account</p>
+            <tr>
+                <td>Login: </td>
+                <td text-align="center"> <input type="text" name="login" required="true"></td>
+            </tr>
+            <tr>
+                <td>Password: </td>
+                <td text-align="cetner"> <input type="text" name="Password" required="true"></td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="OK" name="submit"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
