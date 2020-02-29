@@ -1,4 +1,8 @@
 <!DOCTYPE html>
+<!--
+    References:
+    https://www.w3schools.com/html/html_form_input_types.asp
+-->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,15 +11,41 @@
 <style>
     body
     {
-        background-color: rgb(171, 241, 218);
+        background-color: rgb(233, 255, 248);
     }
     h1
+    {
+        text-align: center;
+    }
+    p
+    {
+        font-size: 25px;
+        font-weight: bold;
+        text-align: right;
+    }
+    form
+    {
+        border-radius: 10px;
+        border: 5px solid rgb(0, 0, 0);
+        padding: 5px;
+        overflow: hidden;
+    }
+    img
+    {
+        width: 300px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .item_description
     {
         text-align: center;
     }
 </style>
 <body>
     <h1>42 E-site</h1>
+    <p>Hello user(placeholder)</p>
     <table>
         <tr>
             <td><a href="00_registration/create_account.html">Create Account</a></td>
@@ -29,6 +59,87 @@
         <tr>
             <td><a href="03_delete_account/delete_account.html">Delete Account</a></td>
         </tr>
+        <tr>
+            <td><a href="#">Sign-Out</a></td>
+        </tr>
     </table>
+    <!-- Laptop Acer -->
+    <form action="#" method="POST">
+        <div class="laptop_acer">
+            <img class="laptop_acer_image" src="database/laptop/acer_helios_3000.jpg" alt="image of acer laptop">
+            <div class="item_description">
+                <h2>Acer Predator Helios 300 Gaming Laptop</h2>
+                <h2>Price $1,199.99<h2>
+                <h2>Quantity <input type="number" name="laptop_acer"></h2>
+                <input type="submit" name="submit">
+            </div>
+        </div>
+    </form>
+    <br>
+    <!-- Laptop MSI-->
+    <form action="#" method="POST">
+        <div class="laptop_msi">
+            <img class="laptop_msi_image" src="database/laptop/msi_gf63.jpg" alt="image of MSI laptop">
+            <div class="item_description">
+                <h2>MSI GF63 Thin 9SC-066 15.6" Gaming Laptop</h2>
+                <h2>Price $949.99<h2>
+                <h2>Quantity</h2><input type="number" name="laptop_msi">
+                <input type="submit" name="submit">
+            </div>
+        </div>
+    </form>
+    <br>
+    <!-- Mobile iphone -->
+    <form action="#" method="POST">
+        <div class="mobile_iphone">
+            <img class="mobile_iphone_image" src="database/mobile/iphone_xr1.jpg" alt="image of iphone mobile">
+            <div class="item_description">
+                <h2>Apple iPhone XR 64GB</h2>
+                <h2>Price $599.00</h2>
+                <h2>Quantity</h2><input type="number" name="mobile_iphone">
+                <input type="submit" name="submit">
+            </div>
+        </div>
+    </form>
+    <br>
+    <!-- Mobile moto -->
+    <form action="#" method="POST">
+        <div class="mobile_moto">
+            <img class="mobile_moto_image" src="database/mobile/moto_g7.jpg" alt="image of Moto 7 phone">
+            <div class="item_description">
+                <h2>Motorola Moto G7 64GB</h2>
+                <h2>Price $299.99</h2>
+                <h2>Quantity</h2><input type="number" name="mobile_moto">
+                <input type="submit" name="submit">
+            </div>
+        </div>
+    </form>
+    <br>
+    <!-- Tablet Galaxy -->
+    <form action="#" method="POST">
+        <div class="tablet_galaxy">
+            <img class="tablet_galaxy_image" src="database/tablet/galaxy_tab_a_10.jpg" alt="image of Samsung Tablet">
+            <div class="item_description">
+                <h2>Samsung Galaxy Tab A (10.1 64 GB)</h2>
+                <h2>Price $299.99</h2>
+                <h2>Quantity</h2><input type="number" name="tablet_galaxy">
+                <input type="submit" name="submit">
+            </div>
+        </div>
+    </form>
+    <br>
+    <!-- Tablet ipad-->
+    <form action="#" method="POST">
+        <div class="tablet_ipad">
+            <img class="tablet_ipad_image" src="database/tablet/ipad_7.jpg" alt="image of ipad Tablet">
+            <div class="item_description">
+                <h2>New Apple iPad (10.2-Inch, Wi-Fi, 128GB)</h2>
+                <h2>Price $329.99</h2>
+                <h2>Quantity</h2><input type="number" name="tablet_galaxy">
+                <input type="submit" name="submit">
+            </div>
+        </div>
+    </form>
+    <br>
 </body>
 </html>

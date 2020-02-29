@@ -79,7 +79,10 @@ function ft_logout()
 
 }
 
+function call_to_login_html_page()
+{
 
+}
 
 /*
     ---main---
@@ -97,11 +100,10 @@ function ft_logout()
 //        use_curl_to_store_user_session();
 //        $_SESSION["logged_in_user"] = $_POST["login"];
         set_whoami();
-        echo("<br>Welcome ".get_whoami()." <br>");
-        ft_logout();
-        echo("<br>Welcome ".get_whoami()." <br>");
-
-//        echo("<br>Welcome ".$_POST["login"]."<br>"); // This needs to redirect to home with login id
+        call_to_login_html_page();
+//        echo("<br>Welcome ".get_whoami()." <br>");
+//        ft_logout();
+//        echo("<br>Welcome ".get_whoami()." <br>");
     }
     else
     {
