@@ -1,6 +1,7 @@
 <?php
 /*
     References:
+    https://stackoverflow.com/questions/6768793/get-the-full-url-in-php
 */
 
 /*
@@ -32,6 +33,53 @@ function is_login_password_valid()
     }
     return(false);
 }
+/*
+function get_current_link()
+{
+    $actual_link = "";
+    if(isset($_SERVER["HTTPS"]) && strcmp($_SERVER["HTTPS"], "on") == 0)
+        $actual_link = $actual_link."https";
+    else
+        $actual_link = $actual_link."http";
+    
+    $actual_link = $actual_link."://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+    return($actual_link);
+}
+
+function get_current_link_with_login()
+{
+    $current_link = get_current_link();
+    $current_link_with_login = $current_link."?login=".$_POST["login"];
+    return($current_link_with_login);
+}
+
+function use_curl_to_store_user_session()
+{
+    $_SESSION["logged_in_user"] = $_POST["login"];
+    $current_link_with_login = get_current_link_with_login();
+//    system("curl -c cook_login_session.txt $current_link_with_login");
+}
+*/
+function get_whoami()
+{
+    return($_SESSION["logged_in_user"]);
+}
+
+function set_whoami()
+{
+    $_SESSION["logged_in_user"] = $_POST["login"];
+}
+
+function ft_logout()
+{
+//    $current_link = get_current_link();
+    $_SESSION["logged_in_user"] = "";
+    unset($_SESSION["logged_in_user"]);
+//    system("curl -b cook_login_session.txt $current_link");
+
+}
+
+
 
 /*
     ---main---
@@ -40,12 +88,33 @@ function is_login_password_valid()
     session_start();
     if(is_login_password_valid() == true)
     {
-        echo("Welcome ".$_POST["login"]."<br>");
+//        echo("This needs to redirect to home with user login id.<br>");
+//        $current_link = get_current_link();
+//        $current_link_with_login = $current_link."?login=".$_POST["login"];
+//        echo($current_link."<br>");
+//        echo($current_link_with_login."<br>");
+//        system("curl -c cook.txt $current_link_with_login");
+//        use_curl_to_store_user_session();
+//        $_SESSION["logged_in_user"] = $_POST["login"];
+        set_whoami();
+        echo("<br>Welcome ".get_whoami()." <br>");
+        ft_logout();
+        echo("<br>Welcome ".get_whoami()." <br>");
+
+//        echo("<br>Welcome ".$_POST["login"]."<br>"); // This needs to redirect to home with login id
     }
     else
     {
         header("Location: login_account_invalid.html");
 //        echo("Invalid login or password. Please Try again");
     }
-
+//    ft_logout();
+/*
+    echo("1 echoing from ft_whoami()<br>");
+    echo(get_whoami()."<br>");
+    echo("Logout<br>");
+    ft_logout();
+    echo("2 echoing from ft_whoami()<br>");
+    echo(get_whoami()."<br>");
+*/    
 ?>
