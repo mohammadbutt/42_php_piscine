@@ -2,6 +2,8 @@
 <!--
     References:
     https://www.w3schools.com/html/html_form_input_types.asp
+    https://stackoverflow.com/questions/14007613/change-text-from-submit-on-input-tag/14007619
+
 -->
 <html lang="en">
 <head>
@@ -42,6 +44,16 @@
     {
         text-align: center;
     }
+
+    .cart_button
+    {
+        font-size: 15px;
+        border-radius: 10px;
+    }
+    .cart_button:hover
+    {
+        background: yellow;
+    }
 </style>
 <body>
     <h1>42 E-site</h1>
@@ -62,6 +74,9 @@
         <tr>
             <td><a href="#">Sign-Out</a></td>
         </tr>
+        <tr>
+            <td><a href="05_cart/cart.php">Shopping Cart</a></td>
+        </tr>
     </table>
     <!-- Laptop Acer -->
     <form action="#" method="POST">
@@ -70,8 +85,7 @@
             <div class="item_description">
                 <h2>Acer Predator Helios 300 Gaming Laptop</h2>
                 <h2>Price $1,199.99<h2>
-                <h2>Quantity <input type="number" name="laptop_acer"></h2>
-                <input type="submit" name="submit">
+                <button class="cart_button" type="submit" name="item" value="laptop_acer">Add to Cart</button>
             </div>
         </div>
     </form>
@@ -83,8 +97,7 @@
             <div class="item_description">
                 <h2>MSI GF63 Thin 9SC-066 15.6" Gaming Laptop</h2>
                 <h2>Price $949.99<h2>
-                <h2>Quantity</h2><input type="number" name="laptop_msi">
-                <input type="submit" name="submit">
+                <button class="cart_button" type="submit" name="item" value="laptop_msi">Add to Cart</button>
             </div>
         </div>
     </form>
@@ -96,8 +109,7 @@
             <div class="item_description">
                 <h2>Apple iPhone XR 64GB</h2>
                 <h2>Price $599.00</h2>
-                <h2>Quantity</h2><input type="number" name="mobile_iphone">
-                <input type="submit" name="submit">
+                <button class="cart_button" type="submit" name="item" value="mobile_iphone">Add to Cart</button>
             </div>
         </div>
     </form>
@@ -109,8 +121,7 @@
             <div class="item_description">
                 <h2>Motorola Moto G7 64GB</h2>
                 <h2>Price $299.99</h2>
-                <h2>Quantity</h2><input type="number" name="mobile_moto">
-                <input type="submit" name="submit">
+                <button class="cart_button" type="submit" name="item" value="mobile_moto">Add to Cart</button>
             </div>
         </div>
     </form>
@@ -122,8 +133,7 @@
             <div class="item_description">
                 <h2>Samsung Galaxy Tab A (10.1 64 GB)</h2>
                 <h2>Price $299.99</h2>
-                <h2>Quantity</h2><input type="number" name="tablet_galaxy">
-                <input type="submit" name="submit">
+                <button class="cart_button" type="submit" name="item" value="tablet_galaxy">Add to Cart</button>
             </div>
         </div>
     </form>
@@ -135,8 +145,7 @@
             <div class="item_description">
                 <h2>New Apple iPad (10.2-Inch, Wi-Fi, 128GB)</h2>
                 <h2>Price $329.99</h2>
-                <h2>Quantity</h2><input type="number" name="tablet_galaxy">
-                <input type="submit" name="submit">
+                <button class="cart_button" type="submit" name="item" value="tablet_ipad">Add to Cart</button>
             </div>
         </div>
     </form>

@@ -81,7 +81,7 @@ function ft_logout()
 
 function call_to_login_html_page()
 {
-
+    exit;
 }
 
 /*
@@ -100,7 +100,8 @@ function call_to_login_html_page()
 //        use_curl_to_store_user_session();
 //        $_SESSION["logged_in_user"] = $_POST["login"];
         set_whoami();
-        call_to_login_html_page();
+        header("Location: ../index.html");
+//        call_to_login_html_page();
 //        echo("<br>Welcome ".get_whoami()." <br>");
 //        ft_logout();
 //        echo("<br>Welcome ".get_whoami()." <br>");
