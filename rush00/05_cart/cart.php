@@ -11,10 +11,9 @@
             3. header will be removed.
 
 */
- //   header("Location: cart.html");
+
     session_start();
     $current_user = $_SESSION["logged_in_user"];
-
 ?>
 
 <!DOCTYPE html>
@@ -77,6 +76,17 @@
     {
         background: rgb(255, 36, 73);
     }
+    .order_button
+    {
+        font-size: 15px;
+        border-radius: 15px;
+    }
+
+    .order_button:hover
+    {
+        background: rgb(125, 247, 101);
+    }
+
 </style>
 <body>
     <h1>42 E-site</h1>
@@ -97,7 +107,8 @@
         <?php
             $i = 0;
             $file_path = $current_user.".txt";
-            $file_array = unserialize(file_get_contents($file_path));
+            if(file_exists($file_path) == true)
+                $file_array = unserialize(file_get_contents($file_path));
             $array_count = count($file_array);
             while($i < $array_count)
             {
@@ -122,6 +133,13 @@
         ?>
         <tr>
             <th style="text-align: left">Total: <?php echo('$ '.number_format($total_price)); ?></th>
+        </tr>
+        <tr>
+            <form action="#" method="POST">
+                <th>
+                    <button class="order_button" type="submit" name="place_order" value="OK">Place Order</button>
+                </th>
+            </form>
         </tr>
         <!-- Above done -->
     </table>
