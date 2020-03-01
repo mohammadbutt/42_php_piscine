@@ -1,0 +1,1 @@
+a:3:{i:0;a:2:{s:4:"item";s:11:"laptop_acer";s:8:"quantity";i:2;}i:1;a:2:{s:4:"item";s:10:"laptop_msi";s:8:"quantity";i:2;}i:2;a:2:{s:4:"item";s:13:"mobile_iphone";s:8:"quantity";i:2;}}
