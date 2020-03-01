@@ -14,20 +14,20 @@ function get_whoami()
 
 function get_item_price()
 {
-    $item_name = $_POST["name"];
+    $item_name = $_POST["item"];
     $price = 0;
     if(strcmp($item_name, "laptop_acer") == 0)
-        $price = 1199.99;
+        $price = 1199;
     else if(strcmp($item_name, "laptop_msi") == 0)
-        $price = 949.99;
+        $price = 949;
     else if(strcmp($item_name, "mobile_iphone") == 0)
-        $price = 599.00;
+        $price = 599;
     else if(strcmp($item_name, "mobile_moto") == 0)
-        $price = 299.99;
+        $price = 299;
     else if(strcmp($item_name, "tablet_galaxy") == 0)
-        $price = 299.99;
+        $price = 299;
     else if(strcmp($item_name, "tablet_ipad") == 0)
-        $price = 329.99;
+        $price = 329;
     return($price);
 }
 
@@ -54,7 +54,7 @@ function put_items_in_cart()
             $i++;
         }
     }
-    $file_array[] = array("item" => $item_name, "quantity" => 1);
+    $file_array[] = array("item" => $item_name, "quantity" => 1, "price" => $price);
     file_put_contents($cart_file_path, serialize($file_array));
     return(0);
 }
