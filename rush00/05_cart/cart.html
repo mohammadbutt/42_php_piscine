@@ -3,6 +3,7 @@
 <!--
     References:
     https://www.w3schools.com/html/html_form_input_types.asp
+    https://www.w3schools.com/html/html_tables.asp
 -->
 <html lang="en">
 <head>
@@ -49,6 +50,16 @@
     {
         text-align: center;
     }
+    .remove_button
+    {
+        font-size: 15px;
+        border-radius: 15px;
+    }
+    .remove_button:hover
+    {
+        background: rgb(255, 36, 73);
+    }
+
 </style>
 <body>
     <h1>42 E-site</h1>
@@ -57,5 +68,25 @@
         $user
         <span class="cart">Shopping cart</span>
     </p>
+    <table style="width: 100%">
+        <tr>
+            <th>Item Name</th>
+            <th>Quantity</th>
+            <th>Item total</th>
+            <th>Remove item</th>
+        </tr><br>
+        <tr>
+            <th>Acer-Laptop</th>
+            <th>1</th>
+            <th>299</th>
+            <form action="#" method="POST">
+            <th><button class="remove_button" type="submit" value="laptop_msi">Remove Item</th>
+            </form>
+        </tr>
+        <tr>
+            <th style="text-align: left">Total</th>
+        </tr>
+    </table>
+
 </body>
 </html>
