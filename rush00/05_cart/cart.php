@@ -12,8 +12,14 @@
 
 */
 
+function get_whoami()
+{
+    return($_SESSION["logged_in_user"]);
+}
     session_start();
     $current_user = $_SESSION["logged_in_user"];
+//    if(strcmp($_POST["place_order"], "OK") == true)
+//        archive_order();
 ?>
 
 <!DOCTYPE html>
@@ -21,6 +27,7 @@
     References:
     https://www.w3schools.com/html/html_form_input_types.asp
     https://www.w3schools.com/html/html_tables.asp
+    https://stackoverflow.com/questions/932653/how-to-prevent-buttons-from-submitting-forms
 -->
 <html lang="en">
 <head>
@@ -135,9 +142,9 @@
             <th style="text-align: left">Total: <?php echo('$ '.number_format($total_price)); ?></th>
         </tr>
         <tr>
-            <form action="#" method="POST">
+            <form action="archive_order.php" method="POST">
                 <th>
-                    <button class="order_button" type="submit" name="place_order" value="OK">Place Order</button>
+                    <button class="order_button" type="submit" name="place_order" on_click="">Place Order</button>
                 </th>
             </form>
         </tr>
