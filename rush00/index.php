@@ -49,14 +49,47 @@ function put_items_in_cart()
             {
                 $file_array[$i]["quantity"] = $file_array[$i]["quantity"] + 1;
                 file_put_contents($cart_file_path, serialize($file_array));
-                return(0);
+                return(1);
             }
             $i++;
         }
     }
-    $file_array[] = array("item" => $item_name, "quantity" => 1, "price" => $price);
+    $file_array[] = array("user" => $logged_user, "item" => $item_name, "quantity" => 1, "price" => $price);
     file_put_contents($cart_file_path, serialize($file_array));
-    return(0);
+    return(1);
+}
+
+function get_item_count()
+{
+    $total_count = 0;
+    $logged_user = get_whoami();
+    $cart_file_path = "05_cart/".$logged_user.".txt";
+    if(file_exists($cart_file_path) == true)
+        $file_array = unserialize(file_get_contents($cart_file_path));
+    $i = 0;
+    $item_count = count($file_array);
+    while($i < $item_count)
+        $total_count = $file_array[$i++]["quantity"] + $total_count;
+    return($total_count);
+}
+
+
+function is_item_valid()
+{
+    $item_name = $_POST["item"];
+    if(strcmp($item_name, "laptop_acer") == 0)
+        return(true);
+    else if(strcmp($item_name, "laptop_msi") == 0)
+        return(true);
+    else if(strcmp($item_name, "mobile_iphone") == 0)
+        return(true);
+    else if(strcmp($item_name, "mobile_moto") == 0)
+        return(true);
+    else if(strcmp($item_name, "tablet_galaxy") == 0)
+        return(true);
+    else if(strcmp($item_name, "tablet_ipad") == 0)
+        return(true);
+    return(false);
 }
 
 /*
@@ -65,8 +98,9 @@ function put_items_in_cart()
 
     session_start();
     $logged_user = get_whoami();
-    if(strcmp($logged_user, "") != 0)
+    if(strcmp($logged_user, "") != 0 && is_item_valid() == true)
         put_items_in_cart();
+    $item_count = get_item_count();
 ?>
 
 <!DOCTYPE html>
@@ -148,7 +182,12 @@ function put_items_in_cart()
             <td><a href="04_logout/logout.php">Sign-Out</a></td>
         </tr>
         <tr>
-            <td><a href="05_cart/cart.php">Shopping Cart</a></td>
+            <td><a href="05_cart/cart.php">Shopping Cart
+                <?php
+                if($item_count > 0)
+                    echo(": $item_count");
+            ?>
+            </a></td>
         </tr>
     </table>
 

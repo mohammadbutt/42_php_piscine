@@ -3,8 +3,7 @@
     References:
     https://stackoverflow.com/questions/27895424/auto-redirect-to-another-html-page/27895443
 */
-//    unset($_SESSION["logged_in_user"]);
-//    header("Location: ../index.php");
+
     session_start();
     $current_user = $_SESSION["logged_in_user"];
     unset($_SESSION["logged_in_user"]);
@@ -12,6 +11,7 @@
 ?>
 
 <!DOCTYPE html>
+<!--  -------------------------------HTML--------------------------------------------- -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
