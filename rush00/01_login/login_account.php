@@ -100,7 +100,7 @@ function call_to_login_html_page()
 //        use_curl_to_store_user_session();
 //        $_SESSION["logged_in_user"] = $_POST["login"];
         set_whoami();
-        header("Location: ../index.html");
+        header("Location: ../index.php");
 //        call_to_login_html_page();
 //        echo("<br>Welcome ".get_whoami()." <br>");
 //        ft_logout();
