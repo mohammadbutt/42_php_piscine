@@ -51,7 +51,7 @@ function archive_order()
 </head>
 <body>
     <h3>Order placed successfully</h3>
-    <h3>redirecting to home in 3 seconds</h3><br>
+    <h3>Redirecting to homepage in 3 seconds</h3><br>
     <meta http-equiv="refresh" content="3; url=../index.php" />
 
 </body>

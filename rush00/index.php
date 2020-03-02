@@ -97,6 +97,8 @@ function is_item_valid()
 */
 
     session_start();
+    if(file_exists("database/user_credential.txt") == false)
+        header("Location: install.php");
     $logged_user = get_whoami();
     if(strcmp($logged_user, "") != 0 && is_item_valid() == true)
         put_items_in_cart();
