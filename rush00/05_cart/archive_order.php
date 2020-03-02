@@ -36,7 +36,6 @@ function archive_order()
         file_put_contents($file_path, serialize($file_array));
         system("mv $file_path $current_user.$arhive_date_time");
     }
-    
 }
     session_start();
     archive_order();

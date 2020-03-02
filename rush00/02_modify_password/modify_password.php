@@ -9,8 +9,9 @@
 */
 
 /*
-    Functions returns -1, if the user either does not exist or the password is wrong
-    If user and password is valid, functions returns the index of the user.
+    Function get_valid_user_index returns index of the user.
+    returns -1 if the user either does not exists or the password is wrong.
+    returns 0 or greater value if the user and password are valid.
 */
 
 function get_valid_user_index()
@@ -47,6 +48,15 @@ function update_password($i)
     file_put_contents($user_credential_file_path, serialize($file_array));
 }
 
+function redirect_password_modified($user_index)
+{
+    $user_credential_file_path = "../database/user_credential.txt";
+    $file_array = unserialize(file_get_contents($user_credential_file_path));
+    header("refresh: 5; url=../index.php");
+    echo("Password for user ".$file_array[$user_index]["login"]." changed succesfully<br>");
+    echo("Redirecting to homepage in 5 seconds<br>");
+}
+
 /*
     ---main---
 */
@@ -56,7 +66,7 @@ function update_password($i)
     if($user_index >= 0)
     {
         update_password($user_index);
-        echo("Password changed succefully<br>");
+        redirect_password_modified($user_index);
     }
     else
         header("Location: modify_password_invalid.html");
