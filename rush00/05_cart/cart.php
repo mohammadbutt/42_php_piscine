@@ -112,6 +112,7 @@ function get_whoami()
             <th>Change quantity</th>
         </tr><br>
         <?php
+        // --- php script begins here ---
             $i = 0;
             $file_path = $current_user.".txt";
             if(file_exists($file_path) == true)
@@ -123,6 +124,7 @@ function get_whoami()
                 $quantity = $file_array[$i]["quantity"];
                 $price = $quantity * $file_array[$i]["price"];
                 $total_price = $price + $total_price;
+        // --- php script ends pauses here ---
         ?>
         <tr>
             <th><?php echo($item); ?></th>
@@ -135,8 +137,10 @@ function get_whoami()
             </form>
         </tr>
         <?php
+        // --- php script resumes here ---
             $i++;
             }
+        //--- php script ends here ---
         ?>
         <tr>
             <th style="text-align: left">Total: <?php echo('$ '.number_format($total_price)); ?></th>
@@ -148,7 +152,6 @@ function get_whoami()
                 </th>
             </form>
         </tr>
-        <!-- Above done -->
     </table>
 </body>
 </html>

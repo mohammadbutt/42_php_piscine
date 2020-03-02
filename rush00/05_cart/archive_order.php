@@ -49,8 +49,20 @@ function archive_order()
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
+<style>
+    body
+    {
+        background-color: rgb(233, 255, 248);
+    }
+</style>
 <body>
-    <h3>Order placed successfully</h3>
+    <?php
+        if(strcmp(get_whoami(), "") == 0)
+            echo("<h3>Please sign in to place an order</h3>");
+        else
+            echo("<h3>Order placed successfully</h3>");
+        
+    ?>
     <h3>Redirecting to homepage in 3 seconds</h3><br>
     <meta http-equiv="refresh" content="3; url=../index.php" />
 
