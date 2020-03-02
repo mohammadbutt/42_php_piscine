@@ -74,19 +74,25 @@ function get_whoami()
     {
         text-align: center;
     }
-    .remove_button
+    .quantity_button
     {
-        font-size: 15px;
-        border-radius: 15px;
+        font-size: 20px;
+        border-radius: 20px;
+        font-weight: bold;
     }
-    .remove_button:hover
+    .subtract_button:hover
     {
         background: rgb(255, 36, 73);
+    }
+    .add_button:hover
+    {
+        background: rgb(125, 247, 101);
     }
     .order_button
     {
         font-size: 15px;
         border-radius: 15px;
+        text-align: center;
     }
 
     .order_button:hover
@@ -130,9 +136,10 @@ function get_whoami()
             <th><?php echo($item); ?></th>
             <th><?php echo($quantity); ?></th>
             <th><?php echo('$ '.number_format($price)); ?></th>
-            <form action="#" method="POST">
+            <form action="change_quantity.php" method="POST">
                 <th>
-                    <button class="remove_button" type="submit" name="item" value="<?php echo($item); ?>">Remove Item</button>
+                    <button class="add_button quantity_button" type="submit" name="item" value="<?php echo($item." +"); ?>">+</button>
+                    <button class="subtract_button quantity_button" type="submit" name="item" value="<?php echo($item." -"); ?>">-</button>
                 </th>
             </form>
         </tr>
