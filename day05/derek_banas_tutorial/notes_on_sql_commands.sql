@@ -1,4 +1,4 @@
-
+/*
 #	Will add column day_of_week to already existing table called sales_item. 
 ALTER TABLE sales_item ADD day_of_week VARCHAR(8);
 
@@ -502,17 +502,57 @@ INSERT INTO sales_item(item_id, sales_order_id, quantity, discount, taxable, sal
 SELECT * FROM sales_item;
 
 
-# All the data at this point is stored, so now we can go ahead and play with it.
-/*
+### All the data at this point is stored ###
+### Now we can go ahead and play with it ###
 
+# Conditional Operators
+# Show all sales greater than 15%
+SELECT *
+FROM sales_item
+WHERE discount > 0.15;
+
+# Logical Operator, which will allow us to combine operators
+# AND OR NOT
+# Find out order dates for all orders in December of 2018
+
+SELECT time_order_taken, cust_id
+FROM sales_order
+WHERE time_order_taken > '2018-12-01' AND time_order_taken < '2018-12-31';
+# or
+# WHERE time_order_taken BETWEEN '2018-12-01' AND '2018-12-31';
+
+#	We can apply the filter Order by discount to view data sorted by order date
+SELECT *
+FROM sales_item
+WHERE discount > 0.15
+ORDER BY discount;
+
+# Sort in descending order on Discount 
+SELECT *
+FROM sales_item
+WHERE discount > 0.15
+ORDER BY discount DESC;
+
+# Sort in descending order on Discount but limiting to first 5
+SELECT * 
+FROM sales_item
+WHERE discount > 0.15
+ORDER BY discount DESC
+LIMIT 5;
+
+# Sort in descending order on Discount but showing the next 5  by doing 5, 10.
+SELECT * 
+FROM sales_item
+WHERE discount > 0.15
+ORDER BY discount DESC
+LIMIT 5, 10;
+
+# We can also combine data.
+# We concatinate first_name and last_name.
+# To set an alias, we type as. In this this AS Name, sets the alias to Name
+# So the column header will show "Name", instead of first_name, " ", last_name
+SELECT CONCAT(first_name, " ", last_name) AS Name,
+phone, state
+FROM customer
+WHERE state = "TX";
 */
-
-
-
-
-
-
-
-
-
-
