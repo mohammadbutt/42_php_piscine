@@ -1,5 +1,10 @@
 <?php
 
+/*
+	test2 will cause error because House class does not have a method called
+	diagnose();
+*/
+
 include('House.class.php');
 
 class DrHouse extends House
