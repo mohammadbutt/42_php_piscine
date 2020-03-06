@@ -1,8 +1,8 @@
 <?php
 
-Class IFIghter
+interface IFighter
 {
-    
+    public function fight();
 }
 
 ?>
