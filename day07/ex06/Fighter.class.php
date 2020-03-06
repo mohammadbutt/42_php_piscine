@@ -1,6 +1,4 @@
 <?php
-
-
 Class Fighter
 {
     private $name;
@@ -13,6 +11,4 @@ Class Fighter
         return($this->name);
     }
 }
-
-
 ?>
