@@ -4,7 +4,7 @@
     https://www.php.net/manual/en/language.operators.type.php
     https://www.php.net/manual/en/internals2.opcodes.instanceof.php
 */
-Class Tyrion
+Class Tyrion extends Lannister
 {
     public function sleepWith($partner_name)
     {

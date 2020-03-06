@@ -3,7 +3,7 @@
     References:
     https://stackoverflow.com/questions/15103810/how-do-i-get-class-name-in-php
 */
-Class Jaime
+Class Jaime extends Lannister
 {
     public function sleepWith($class_name)
     {

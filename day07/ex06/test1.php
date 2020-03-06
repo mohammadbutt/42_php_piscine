@@ -39,7 +39,10 @@ class Llama {
 	}
 }
 
+// -- main
+
 $uf = new UnholyFactory();
+$uf->absorb(new Footsoldier());
 $uf->absorb(new Footsoldier());
 $uf->absorb(new Footsoldier());
 $uf->absorb(new Archer());
@@ -57,8 +60,7 @@ $requested_fighters = Array(
 	"archer",
 );
 
-$actual_fighters = Array(
-);
+$actual_fighters = Array();
 
 foreach ($requested_fighters as $rf) {
 	$f = $uf->fabricate($rf);
