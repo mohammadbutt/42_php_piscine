@@ -19,7 +19,6 @@
     .circle
     {
         border-radius: 50%;
-        text-align: center;
     }
 </style>
 
@@ -27,39 +26,32 @@
     <div class="circle" style="background-color: red; height: 200px; width:200px;">
     </div>
     <script>
-        let circle_class = document.querySelector(".circle");
-
+        // --- Javascript ---
         function increase_size()
         {
-            circle_class.addEventListener("click", () => {
+            let circle_class = document.querySelector(".circle");
             let current_height = parseInt(circle_class.style.height);
             let current_width = parseInt(circle_class.style.width);
-                if (current_height == 420)
-                {
-                    current_height = 200;
-                    current_width = 200;
-                }
-                circle_class.style.height = current_height + 10 + "px";
-                circle_class.style.width = current_width + 10 + "px";
-                change_color();
-                console.log(typeof (parseInt(circle_class.style.height)));
-            })
+            if (current_height == 420)
+            {
+                current_height = 200;
+                current_width = 200;
+            }
+            circle_class.style.height = current_height + 10 + "px";
+            circle_class.style.width = current_width + 10 + "px";
+            change_color();
         }
         function decrease_size()
         {
-            circle_class.addEventListener("mouseout", () => {
+            let circle_class = document.querySelector(".circle");
             let current_height = parseInt(circle_class.style.height);
             let current_width = parseInt(circle_class.style.width);
-
-                if (current_height != 200)
-                {
-                    circle_class.style.height = current_height - 10 + "px";
-                    circle_class.style.width = current_width - 10 + "px";
-                    change_color();
-                }
-
-                console.log(typeof (parseInt(circle_class.style.height)));
-            })
+            if (current_height != 200)
+            {
+                circle_class.style.height = current_height - 10 + "px";
+                circle_class.style.width = current_width - 10 + "px";
+                change_color();
+            }
         }
         function change_color()
         {
@@ -71,8 +63,10 @@
             else if (current_color === "blue")
                 circle_class.style.backgroundColor = "red";
         }
-        increase_size();
-        decrease_size();
+        let circle_class = document.querySelector(".circle");
+        circle_class.addEventListener("click", increase_size);
+        circle_class.addEventListener("mouseout", decrease_size);
+
     </script>
 </body>
 
