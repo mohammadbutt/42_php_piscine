@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!--
+    div 200px by 200px;
+    red background color.
+    At click increase size by 10px;
+    Red -> Green -> Blue
+
+    If the size is greater than 420px, bring the size back to 200px;
+-->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Balloon</title>
+</head>
+<style>
+    .circle
+    {
+        border-radius: 50%;
+        text-align: center;
+    }
+</style>
+
+<body>
+    <div class="circle" style="background-color: red; height: 200px; width:200px;">
+    </div>
+    <script>
+        let circle_class = document.querySelector(".circle");
+
+        function increase_size()
+        {
+            circle_class.addEventListener("click", () => {
+            let current_height = parseInt(circle_class.style.height);
+            let current_width = parseInt(circle_class.style.width);
+                if (current_height == 420)
+                {
+                    current_height = 200;
+                    current_width = 200;
+                }
+                circle_class.style.height = current_height + 10 + "px";
+                circle_class.style.width = current_width + 10 + "px";
+                change_color();
+                console.log(typeof (parseInt(circle_class.style.height)));
+            })
+        }
+        function decrease_size()
+        {
+            circle_class.addEventListener("mouseout", () => {
+            let current_height = parseInt(circle_class.style.height);
+            let current_width = parseInt(circle_class.style.width);
+
+                if (current_height != 200)
+                {
+                    circle_class.style.height = current_height - 10 + "px";
+                    circle_class.style.width = current_width - 10 + "px";
+                    change_color();
+                }
+
+                console.log(typeof (parseInt(circle_class.style.height)));
+            })
+        }
+        function change_color()
+        {
+            let current_color = circle_class.style.backgroundColor;
+            if (current_color === "red")
+                circle_class.style.backgroundColor = "green";
+            else if (current_color === "green")
+                circle_class.style.backgroundColor = "blue";
+            else if (current_color === "blue")
+                circle_class.style.backgroundColor = "red";
+        }
+        increase_size();
+        decrease_size();
+    </script>
+</body>
+
+</html>
